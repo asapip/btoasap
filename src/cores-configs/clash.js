@@ -11,7 +11,7 @@ async function buildClashDNS(isChain, isWarp) {
         "ipv6": isIPv6,
         "respect-rules": true,
         "use-system-hosts": false,
-        "nameserver": [`${isWarp ? '1.1.1.1' : settings.remoteDNS}#✅ Selector`],
+        "nameserver": [`${isWarp ? '1.1.1.1' : settings.remoteDNS}#✅Selector`],
         "proxy-server-nameserver": [finalLocalDNS],
         "nameserver-policy": {
             "raw.githubusercontent.com": finalLocalDNS,
