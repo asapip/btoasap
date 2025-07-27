@@ -202,7 +202,7 @@ async function getWarpConfigs(request, env) {
 
     try {
         warpEndpoints.forEach((endpoint, index) => {
-            zip.file(`BPB-Warp-${index + 1}.conf`, trimLines(
+            zip.file(`DMB-Warp-${index + 1}.conf`, trimLines(
                 `[Interface]
                 PrivateKey = ${privateKey}
                 Address = 172.16.0.2/32, ${warpIPv6}
@@ -222,7 +222,7 @@ async function getWarpConfigs(request, env) {
         return new Response(arrayBuffer, {
             headers: {
                 "Content-Type": "application/zip",
-                "Content-Disposition": `attachment; filename="BPB-Warp-${isPro ? "Pro-" : ""}configs.zip"`,
+                "Content-Disposition": `attachment; filename="DMB-Warp-${isPro ? "Pro-" : ""}configs.zip"`,
             },
         });
     } catch (error) {

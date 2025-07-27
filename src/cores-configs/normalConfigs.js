@@ -88,7 +88,7 @@ export async function getNormalConfigs(isFragment) {
     }
 
     const configs = btoa(VLConfs + TRConfs + chainProxy);
-    const hiddifyHash = base64EncodeUnicode( isFragment ? '💦 BPB Fragment' : '💦 BPB Normal');
+    const hiddifyHash = base64EncodeUnicode( isFragment ? '💦 DMB Fragment' : '💦 DMB Normal');
     
     return new Response(configs, {
         status: 200,
@@ -124,7 +124,7 @@ export async function getHiddifyWarpConfigs(isPro) {
         configs += `${config.href}&&detour=${detour.href}\n`;
     });
 
-    const hiddifyHash = base64EncodeUnicode(`💦 BPB Warp${isPro ? ' Pro' : ''}`);
+    const hiddifyHash = base64EncodeUnicode(`💦 DMB Warp${isPro ? ' Pro' : ''}`);
     return new Response(btoa(configs), {
         status: 200,
         headers: {
